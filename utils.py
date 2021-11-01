@@ -52,9 +52,9 @@ def read_test_data(data_main_path,data_name,IMAGE_HEIGHT,IMAGE_WIDTH):
     mask_path = data_main_path +"/" + data_name + "_mask.png"
     dp_path = data_main_path +"/" + data_name + "_dp.png"
     
-    color = np.array(scipy.misc.imread(image_path),dtype='f')
-    mask = np.array(scipy.misc.imread(mask_path),dtype='f')
-    dp = np.array(scipy.misc.imread(dp_path),dtype='f')
+    color = np.array(scipy.misc.imread(image_path),dtype='f')[:, :, 0:3]
+    mask = np.array(scipy.misc.imread(mask_path),dtype='f')[:, :, 0]
+    dp = np.array(scipy.misc.imread(dp_path),dtype='f')[:, :, 0:3]
     
     X = np.zeros((1,IMAGE_HEIGHT,IMAGE_WIDTH,3),dtype='f')
     X[0,...] = color
