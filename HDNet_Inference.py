@@ -24,8 +24,9 @@ from hourglass_net_normal import hourglass_normal_prediction
 from utils import (write_matrix_txt,get_origin_scaling,get_concat_h, depth2mesh, read_test_data, nmap_normalization, get_test_data) 
 
 ############################## test path and outpath ##################################
-data_main_path = './test_data'
-outpath = data_main_path+"/infer_out/"
+data_main_path = '/content/gdrive/MyDrive/datasets/siggraph2022/hdnet_input'
+outpath = "/content/gdrive/MyDrive/datasets/siggraph2022/hdnet_output/2"
+
 visualization = True
 
 ##############################    Inference Code     ##################################
